@@ -24,9 +24,7 @@
 
 <body>
 
-<!--this page contain details of user present in the database in tabular format-->
-<!--transaction of particular page or common page-->
-
+<!--this page contain details of user present in the database-->
 <?php
 
 $con=mysqli_connect("localhost","root","") or die(mysqli_error($con));
@@ -48,12 +46,12 @@ $rs=mysqli_query($con,"select * from CustomerTb") or die(mysqli_error($con));
                     <table class="table roundedCorners tabletext table-hover table-sm table-striped table-condensed">
                         <thead>
                             <tr>
-         						<td> id </td> 
-         					    <td> Email</td> 
-         					    <td> Name </td> 
-         					    <td> Amount </td> 
+         				<td> id </td> 
+         				<td> Email</td> 
+         				<td> Name </td> 
+         				<td> Amount </td> 
                                 <th scope="col">Operations</th>
-           					 </tr>
+           		  </tr>
                          </thead>
                         <tbody>
                 
@@ -92,7 +90,7 @@ $rs=mysqli_query($con,"select * from CustomerTb") or die(mysqli_error($con));
 	mysqli_close($con); 
 
 ?>
-						</tbody>
+			</tbody>
                     </table>
                     </div>
                 </div>
@@ -106,8 +104,5 @@ $rs=mysqli_query($con,"select * from CustomerTb") or die(mysqli_error($con));
             	<center><p>Copyright &copy; TSF Bank.All Rights Reserved|Contact Us: +91 90000 00000</p></center>
             </div>
 </footer> 
-
-<!--we can add a view customer or view history button in the table as well so that the user can see it's previous transactions-->
-<!--something similar to show records address wise-->
 </body>
 </html>
